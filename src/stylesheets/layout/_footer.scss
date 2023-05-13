@@ -1,0 +1,134 @@
+@use "../abstracts" as *;
+
+.footer-main {
+  background-color: $text-color;
+  color: $text-white;
+
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 43px 0;
+
+    @include tablet {
+      padding: 28px 0;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__col {
+    width: 25%;
+    margin-right: pxToRem(29);
+
+    @include mobile {
+      width: 35%;
+      margin-top: 28px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @include mobile {
+        margin-right: pxToRem(29);
+      }
+    }
+
+    .title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 2px;
+      padding-bottom: 19px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid $border;
+
+      @include tablet {
+        font-size: pxToRem(12);
+        line-height: pxToRem(14);
+      }
+    }
+
+    .link-list {
+      font-size: 16px;
+      line-height: 24px;
+
+      @include tablet {
+        font-size: pxToRem(11);
+        line-height: pxToRem(16);
+      }
+
+      .link {
+        margin-top: 12px;
+
+        @include mobile {
+          margin-top: 6px;
+        }
+      }
+    }
+
+  }
+
+// bottom footer
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    padding: 28px 0 40px;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-top: 1px solid #7d7d7d;
+
+
+    @include mobile {
+      padding-bottom: 46px;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__coppyright {
+    line-height: 24px;
+    font-size: 16px;
+
+    @include tablet {
+      line-height: pxToRem(12.8);
+      font-size: pxToRem(11);
+    }
+
+    @include mobile {
+      text-align: center;
+      margin-top: 29px;
+    }
+
+
+  }
+
+  &__social {
+
+    width: fit-content;
+
+    .social-img {
+      @include tablet {
+        height: 16.5px;
+      }
+    }
+
+
+    a {
+      display: inline-block;
+      margin-right: 45px;
+
+      @include tablet {
+        margin-right: 30px;
+      }
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+}

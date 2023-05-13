@@ -1,0 +1,37 @@
+@use "../../abstracts" as * ;
+
+.plants {
+  width: 100%;
+  background-color: $sub-color;
+
+  &__container {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &--title {
+    padding-top: 68px;
+
+    @include tablet {
+      padding-top: 56px;
+
+    }
+  }
+
+  &__card-ctn {
+    padding: 76px 0 116px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include tablet {
+      padding: 31px 0 74px;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+}

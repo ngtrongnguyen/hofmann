@@ -1,0 +1,208 @@
+@use "../../abstracts" as *;
+
+.results {
+  background-color: $text-white;
+  padding-bottom: pxToRem(111);
+
+  @include tablet {
+    padding-bottom: pxToRem(48);
+  }
+
+  .decs {
+    font-weight: 400;
+    font-size: pxToRem(16);
+    line-height: pxToRem(24);
+
+    @include tablet {
+      font-size: pxToRem(11);
+      line-height: pxToRem(16);
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    padding-top: pxToRem(69);
+    text-align: center;
+    margin-bottom: 53px;
+
+    @include tablet {
+      padding-top: pxToRem(34);
+      margin-bottom: 22px;
+    }
+    .title--primary {
+      margin-bottom: 22px;
+    }
+
+
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    width: 23%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+      width: 40%;
+      margin: 0 auto 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    p:first-child {
+      margin-bottom: 20px;
+    }
+
+
+  }
+
+  &__circle {
+    position: relative;
+    width: pxToRem(204);
+    height: pxToRem(204);
+    line-height: pxToRem(204);
+    margin: 0 auto;
+    border-radius: 50%;
+    background: none;
+    margin-bottom: 27.7px;
+
+    @include tablet {
+      width: pxToRem(108);
+      height: pxToRem(108);
+      line-height: pxToRem(108);
+      margin-bottom: 15px;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid $border;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    & > span {
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 100%;
+      background: none;
+      border: 8px $primary-color solid ;
+      position: absolute;
+      top: 0;
+
+      @include tablet {
+        border-width: 5px ;
+      }
+    }
+
+    .progress-right {
+      right: 1;
+
+      .progress-bar {
+        left: -100%;
+        border-top-left-radius: 204px;
+        border-bottom-left-radius: 204px;
+        border-right: 0;
+        transform-origin: center right;
+        -webkit-transform-origin: center right;
+      }
+    }
+
+    .progress-left {
+      left: 0;
+
+      .progress-bar {
+        left: 100%;
+        border-top-right-radius: 204px;
+        border-bottom-right-radius: 204px;
+        border-left: 0;
+        transform-origin: center left;
+        -webkit-transform-origin: center left;
+      }
+    }
+
+    .percent {
+      justify-content: center;
+      display: flex;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: pxToRem(64);
+      position: absolute;
+      transform: translateX(-50%) translateY(-50%);
+      align-items: baseline;
+
+      @include tablet {
+        font-size: pxToRem(32);
+      }
+
+      sup {
+        font-size: pxToRem(32);
+
+        @include tablet {
+          font-size: pxToRem(16);
+        }
+      }
+    }
+
+    .first--right-bar {
+      transform: rotate(-90deg);
+    }
+
+    .first--left-bar {
+      transform: rotate(180deg);
+    }
+
+    .second--left-bar {
+      transform: rotate(215deg);
+    }
+
+    .second--right-bar {
+      display: block;
+    }
+    .third--right-bar {
+      transform: rotate(225deg);
+    }
+
+    .third--left-bar {
+      transform: rotate(180deg);
+    }
+  }
+}
+

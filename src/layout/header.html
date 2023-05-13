@@ -1,0 +1,99 @@
+<header class="main-header">
+  <div class="container header-container">
+    <div class="main-header__top">
+      <div class="logo">
+        <p class="logo__content">H.</p>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul class="menu__list">
+            <include
+            src="./src/components/header-list.html"
+            locals='{
+              "list": "[`Prices`, `Booking`, `Blog`, `Services`]"
+            }'
+            ></include>
+          </ul>
+        </nav>
+        <div class="menu__switch">
+          <img
+            src="../assets/icons/ic-search.svg"
+            class="menu__switch__search"
+            alt="search"
+          />
+          <select
+            name="lang"
+            id="lang"
+            class="menu__languages__select header-text"
+          >
+            <option value="US">US</option>
+            <option value="VN">VN</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="main-header__mid">
+      <div class="main-header__content">
+        <p class="header-text upper-case top-text">responsive ui kit</p>
+          <h1 class="upper-case main-header__title">hofmann</h1>
+          <p class="main-header__sub-title">We're Bring It To The New Level</p>
+          <p class="main-header__desc">
+            Every new computer that’s brought home from the store has an
+            operating system installed onto it. But what most new computer users
+            don’t realize, is that without an operating system, that computer
+            would be a simple shell of possibilities.
+          </p>
+        <div class="main-header__download">
+          <a href="#">
+            <img
+              src="../assets/images/desktop/appstore-badge.png"
+              alt="App Store"
+              class="img-store"
+            />
+          </a>
+          <a href="">
+            <img
+              src="../assets/images/desktop/google-play-badge.png"
+              alt="Google Play"
+              class="img-store"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="main-header__phone-ctn">
+        <figure class="main-header__mid__phone">
+          <picture class="img-main">
+            <source
+              media="(max-width: 767px)"
+              srcset="../assets/images/mobile/Iphone.png"
+              class="img-main"
+            />
+            <img
+              src="../assets/images/desktop/iphone.png"
+              alt="phone"
+              class="phone-img"
+            />
+          </picture>
+          <figure class="main-header__mid__screen">
+            <picture class="img-main">
+              <source
+                media="(max-width: 767px)"
+                srcset="../assets/images/mobile/Iphone-screen.png"
+                class="img-main"
+              />
+              <img
+                src="../assets/images/desktop/iphone-screen.png"
+                alt=""
+                class="phone-img"
+
+              />
+            </picture>
+          </figure>
+
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</header>

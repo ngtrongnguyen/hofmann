@@ -1,0 +1,170 @@
+@use "../../abstracts/" as * ;
+
+.feedback {
+  background-color: $text-white;
+  &__container {
+    text-align: center;
+    margin-top: 76px;
+  }
+
+  &--title {
+    padding: 44px 0 76px;
+
+    @include tablet {
+      padding: 40px 0 32px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__slider {
+    text-align: left;
+    border-radius: 8px;
+    width: 47.5%;
+    padding: 0 65px;
+    position: relative;
+    margin-bottom: 50px;
+    box-shadow: 0px 8px 16px $shadow-primary;
+    .quote {
+      text-align: center;
+      font-size: 64px;
+      line-height: 66px;
+      transform: rotate(540deg);
+      padding-bottom: 30px;
+    }
+
+    @include mobile {
+      width: 80%;
+      margin: 0 auto;
+      padding: 0 27px;
+    }
+  }
+
+  &__content {
+    padding-bottom: 40px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @include tablet {
+      font-size: 11px;
+      line-height: 16px;
+      padding-bottom: 27px;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 28px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 80px;
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 30px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    transform: translateY(55px);
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    width: 128px;
+    height: 128px;
+
+    & img {
+      border-radius: 50%;
+    }
+
+    @include tablet {
+      left: 60%;
+      transform: translateY(80px);
+    }
+
+    @include mobile {
+      transform: translateX(-50%) translateY(80px);
+    }
+  }
+
+  &__left {
+    background-color: $primary-color;
+    &  img {
+      border: 2px $text-color solid;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__right {
+    background-color: $text-color;
+    color: $text-white;
+    top: 80px;
+    &  img {
+      border: 2px $primary-color solid;
+    }
+
+    @include tablet {
+      top: 0;
+    }
+
+    & .feedback__name {
+      color: $primary-color;
+    }
+  }
+
+  .slider-btn {
+    padding-bottom: 68px;
+
+    .dot {
+      border: 2px $text-color solid;
+      border-radius: 50%;
+      height: 14px;
+      width: 14px;
+      display: inline-block;
+      margin-left: 5px;
+      cursor: pointer;
+
+      @include tablet {
+        height: 8px;
+        width: 8px;
+      }
+    }
+
+    .dot-m {
+      display: none;
+
+      @include mobile {
+        display: inline-block;
+      }
+    }
+    @include tablet {
+      padding-bottom: 48px;
+    }
+
+    .dot:first-child {
+      background-color: $text-color;
+      margin-left: 0;
+    }
+  }
+}

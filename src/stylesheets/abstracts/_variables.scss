@@ -1,0 +1,29 @@
+@use "functions" as *;
+
+// Font
+$primary-font: Roboto;
+
+// Breakpoints
+
+$medium: 768px;
+$extra-lager: 1200px;
+
+$mobile: calc($medium - 1px);
+$tablet: calc($extra-lager - 1px);
+
+// Colors
+
+$border: #DADADA;
+$border-secondary: #E6E6E6;
+$text-white: #ffffff;
+$primary-color: #ebcb80;
+$sub-color: #f6f6f6;
+$background-color: #ebcb80;
+$background-color-overlay: #ffb50834;
+$text-color: #4b4b4b;
+$background-input: #e2e1e1;
+$border-input: #999999;
+$main-spacing: pxToRem(-0.58);
+$shadow-primary: rgba(0, 0, 0, 0.5);
+$card-overlay: linear-gradient(180deg, rgba(60, 60, 60, 0.198171) 0%, rgba(60, 60, 60, 0.704257) 100%);
+

@@ -1,0 +1,57 @@
+<section class="plants">
+  <div class="container plants__container">
+    <p class="title--primary plants--title">
+      Subscribing Plans
+    </p>
+    <div class="plants__card-ctn">
+
+      <include
+        src="./src/components/plants-card.html"
+        locals='{
+          "cardImgDesktop":"../assets/images/desktop/image-plans-1.png",
+          "cardImgTablet":"../assets/images/tablet/image-plans-1.png",
+          "cardImgMobile":"../assets/images/mobile/image-plans-1.png",
+          "plantTitle":"freemium",
+          "plantPrice":"0",
+          "list": "[`Basic Collections`, `10 Messages`, `50 Images per Day`]"
+        }'
+      ></include>
+
+      <include
+        src="./src/components/plants-card.html"
+        locals='{
+          "cardImgDesktop":"../assets/images/desktop/image-plans-2.png",
+          "cardImgTablet":"../assets/images/tablet/image-plans-2.png",
+          "cardImgMobile":"../assets/images/mobile/image-plans-2.png",
+          "plantTitle":"start up",
+          "plantPrice":"9",
+          "list": "[`Multiple Collections`, `100 Messages`, `100 Images per Day`]"
+        }'
+      ></include>
+
+      <include
+        src="./src/components/plants-card.html"
+        locals='{
+          "cardImgDesktop":"../assets/images/desktop/image-plans-3.png",
+          "cardImgTablet":"../assets/images/tablet/image-plans-3.png",
+          "cardImgMobile":"../assets/images/mobile/image-plans-3.png",
+          "plantTitle":"business",
+          "plantPrice":"29",
+          "list": "[`Unlimited Collections`, `500 Messages`, `300 Images per Day`, `Project Reviews`]"
+        }'
+      ></include>
+
+      <include
+        src="./src/components/plants-card.html"
+        locals='{
+          "cardImgDesktop":"../assets/images/desktop/image-plans-4.png",
+          "cardImgTablet":"../assets/images/tablet/image-plans-4.png",
+          "cardImgMobile":"../assets/images/mobile/image-plans-4.png",
+          "plantTitle":"enterprise",
+          "plantPrice":"49",
+          "list":"[`Unlimited Collections`, `Unlimited Messages`, `Unlimited Images per Day`, `Project Reviews`]"
+        }'
+      ></include>
+    </div>
+  </div>
+</section>

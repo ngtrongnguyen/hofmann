@@ -1,0 +1,54 @@
+<div class="products__card">
+  <figure class=" img-main products__img-ctn">
+    <picture class="img-main">
+      <source
+      media="(max-width: 1199px)"
+      srcset="{{ cardTabletImg }}"
+      class="img-main"
+      >
+      <source
+      media="(max-width: 767px)"
+      srcset="{{ cardMobileImg }}"
+      class="img-main"
+      >
+      <img
+      src="{{ cardImg }}"
+      alt="Product"
+      loading="lazy"
+      class="products__img"
+      >
+    </picture>
+
+    <div class="products__img--preview">
+      <img
+      src="../assets/icons/ic-view.svg"
+      alt="view"
+      class="products__img--eye"
+      loading="lazy"
+      >
+      <p class="products__img--view">
+        <img
+        src="../assets/icons/ic-view.svg"
+        alt="view"
+        class="products__img--eye-small"
+        loading="lazy"
+        >
+        {{ productView }}
+      </p>
+    </div>
+  </figure>
+
+  <div class="products__desc">
+    <p class="products__desc--name upper-case title--secondary">{{ productName }}</p>
+    <p class="products__desc--author">
+
+      <span class="small-text">by</span>
+
+      {{ productAuthor }}
+    </p>
+    <a href="javascript:void(0)" class="upper-case products__card--btn">
+      review
+    </a>
+  </div>
+
+</div>

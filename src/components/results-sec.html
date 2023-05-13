@@ -1,0 +1,48 @@
+<section class="results">
+  <div class="container results__container">
+
+    <div class="results__title">
+      <h1 class="title--primary">Stunning Results</h1>
+      <p class="decs">Just look to the statistics we have generate the past year.</p>
+    </div>
+
+    <div class="results__content">
+      <!-- start card -->
+      <include
+        src="./src/components/results-card.html"
+        locals='{
+          "order" : "first",
+          "percent" : "74",
+          "supPercent" : "98",
+          "title" : "TOTAL CONVERSION",
+          "decs" : "The past few years have seen a dramatic change in the public perception of cosmetic surgery."
+        }'
+      >
+      </include>
+      <!-- start card -->
+      <include
+        src="./src/components/results-card.html"
+        locals='{
+          "order" : "second",
+          "percent" : "39",
+          "supPercent" : "75",
+          "title" : "FREE DOWNLOADS",
+          "decs" : "Can you imagine what we will be downloading in another twenty years?"
+        }'
+      >
+      </include>
+      <!-- start card -->
+      <include
+        src="./src/components/results-card.html"
+        locals='{
+          "order" : "third",
+          "percent" : "81",
+          "supPercent" : "15",
+          "title" : "UNIQUE VISITORS",
+          "decs" : "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life."
+        }'
+      >
+      </include>
+    </div>
+  </div>
+</section>

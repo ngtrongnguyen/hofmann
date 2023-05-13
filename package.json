@@ -1,0 +1,43 @@
+{
+  "name": "t_html-css-2nd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/pages/index.html",
+    "prepare": "husky install",
+    "build": "parcel build src/pages/index.html"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "parcel": "^2.8.2",
+    "posthtml": "^0.16.6",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4",
+    "prettier": "^2.8.1",
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "editorconfig": "^1.0.1"
+  },
+  "lint-staged": {
+    "src/**/*.{html,scss}": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix --max-warnings=0"
+    ]
+  },
+  "eslintIgnore" : ["src/**/*.scss"]
+}

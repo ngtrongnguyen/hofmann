@@ -1,0 +1,37 @@
+<div class="plants__card">
+  <figure class="plants__img-ctn img-main">
+    <picture class="img-main">
+      <source
+      media="(max-width:1199px)"
+      srcset="{{ cardImgTablet }}"
+      class="img-main">
+
+      <source
+      media="(max-width:767px)"
+      srcset="{{ cardImgMobile }}"
+      class="img-main">
+
+      <img
+      src="{{ cardImgDesktop }}"
+      alt="plant"
+      class="plants__img"
+      loading="lazy">
+    </picture>
+
+    <figcaption class="plants__card--title-ctn">
+      <p class="upper-case title">{{ plantTitle }}</p>
+      <p class="price"><span class="dollar">$</span> {{ plantPrice }} </p>
+    </figcaption>
+  </figure>
+  <div class="plants__card--content">
+    <div class="plants__card--desc-ctn">
+      <each loop="item in {{ list }}">
+        <p class="plants__card--desc">{{ item }}</p>
+      </each>
+    </div>
+
+    <div class="plants__card--btn">
+      <a href="javascript:void(0)" class="upper-case start--btn">get started</a>
+    </div>
+  </div>
+</div>
