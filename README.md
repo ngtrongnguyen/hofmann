@@ -4,7 +4,7 @@
 
 ## TIMELINE:
 
-- 2 week (Dec 27 - Jan 09)
+- 1 week (Dec 27 - Jan 03)
 
 ## TARGET:
 
